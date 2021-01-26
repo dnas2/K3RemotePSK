@@ -58,7 +58,7 @@ namespace K3RemotePSK
                     serialPort.DiscardOutBuffer();
                     serialPort.DiscardInBuffer();
                     serialPort.Write("TT0;");
-                    serialPort.Write("FA00010139000;"); // Sets 30m
+                    serialPort.Write("FA00014071700;"); // Sets 20m - 14.070MHz + 1700Hz audio
                     Thread.Sleep(500);
                     serialPort.Write("MD6;"); // Sets data mode
                     Thread.Sleep(200);
@@ -280,7 +280,7 @@ namespace K3RemotePSK
             string personName = "OM";
             if (nameTextBox.Text.Length > 1) { personName = nameTextBox.Text; }
             string intro = overIntro();
-            transmitThisMulti(intro + " Hello dear " + personName + " and thanks for the call = Your RST RST " + rstTextBox.Text + " " + rstTextBox.Text + " = Name Name is Dom Dom Dom and QTH QTH is Cambridge Cambridge Cambridge + " + intro + " )");
+            transmitThisMulti(intro + " Hello dear " + personName + " and thanks for the call = Your RST RST " + rstTextBox.Text + " " + rstTextBox.Text + " = Name Name is Dom Dom Dom and QTH QTH is Cambridge Cambridge Cambridge (JO02bg JO02bg) + " + intro + " )");
         }
 
         private void lastOverButton_Click(object sender, EventArgs e)
